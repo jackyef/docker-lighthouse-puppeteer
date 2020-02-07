@@ -1,0 +1,4 @@
+node_modules
+
+docker/test.sh
+test.sh

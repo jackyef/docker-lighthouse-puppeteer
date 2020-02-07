@@ -1,0 +1,10 @@
+FROM femtopixel/google-lighthouse-puppeteer:5.5.0
+COPY ./docker /code
+COPY ./docker/entrypoint.sh /usr/bin/entrypoint
+RUN chmod 755 /code
+RUN chmod 755 /code
+WORKDIR /code
+
+RUN yarn
+
+ENTRYPOINT ["entrypoint"]

@@ -1,0 +1,14 @@
+{
+  "version": "5.5.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "lighthouse": "5.5.0",
+    "marky": "^1.2.1",
+    "puppeteer": "^2.1.1",
+    "yargs": "^15.1.0",
+    "yargs-parser": "^16.1.0"
+  }
+}
