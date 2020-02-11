@@ -7,5 +7,5 @@ CHROME_FLAGS=${CHROME_FLAGS:-"--headless --disable-gpu --no-sandbox"}
 if [ "${1#http}" != "$1" ]; then
     node index.js --enable-error-reporting --chrome-flags="${CHROME_FLAGS}" "$@"
 else 
-    node /code/index.js "$@"
+    node index.js --enable-error-reporting "$@"
 fi

@@ -9,7 +9,7 @@ const saveResults = require('./saveResults.js');
 
 const lighthouseCliFlags = getFlags();
 
-const PORT = 5555;
+const PORT = lighthouseCliFlags.port || 5555;
 
 async function addCookies(browser, cookieObjects) {
   const page = await browser.newPage();
@@ -73,8 +73,8 @@ async function main() {
       `--remote-debugging-port=${PORT}`,
       ...parseChromeFlags(lighthouseCliFlags.chromeFlags),
     ],
-    // Optional, if you want to see the tests in action.
-    headless: false,
+    // Optional, set to true if you want to see the tests in action.
+    // headless: false,
     slowMo: 50
   });
 
